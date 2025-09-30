@@ -6,4 +6,16 @@ Peça ao usuário para inserir um novo nome no array.
 Em seguida, utilizando for...of, conte quantos nomes na lista possuem mais de 5 caracteres. 
 Apresente para o usuário qual o número total de nomes longos encontrados.
     */
+    let nomes = ["Ana", "Carlos", "Beatriz", "Augusto", "Fernanda"];
+    const novo = prompt(`Insira um novo nome:`);
+    nomes.push(novo);
+    let final = [];
+
+    for (let itens of nomes){
+        if(itens.length <= 5){
+            final.push(itens)
+        }
+    }
+    alert(`A lista de nomes curtos são: ${final}`);
+
 </script>

@@ -7,5 +7,18 @@ Usando for...of, calcule o preço total da compra, aplicando o desconto informad
 Apresente para o usuário qual será o valor final da compra.
     */
 
-   
+    let compras = [50.00, 15.50, 120.00, 80];
+    const percentual = prompt(`Insira um percentual de desconto que será aplicado nos preços que estão contidos na lista.`);
+    let final = 0;
+
+    for (let item of compras) {
+        if (item < 60) {
+            final = final + item;
+        }
+        else {
+            final = final + (item - (item * percentual / 100));
+        }
+    }
+    alert(`O valor final com desconto será de ${final.toFixed(2).replace(".",",")}`);
+
 </script>

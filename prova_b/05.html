@@ -7,22 +7,25 @@ Usando for...of, crie um novo array contendo apenas as cidades da lista original
 Ao final, exiba o novo array com as cidades que atenderam a condição estabelecida.
     */
 
-let cidades= ["Recife", "Salvador", "Rio de Janeiro", "São Paulo", "Manaus"];
-const letra = prompt(`digte uma letra:`).toUpperCase();
+const cidades= ["Recife", "Salvador", "Rio de Janeiro", "São Paulo", "Manaus"];
+const letra = prompt(`Digte uma letra:`).toUpperCase();
 let final = [];
 
-for(let item of cidades){
-    if(item.length(letra)){
+for(const item of cidades){
+    if(item.toUpperCase().startsWith(letra.toUpperCase())){
         final.push(item);
-        if(final > 0){
-        alert(`As cidades que começão com a ${letra} são ${final}`);
+        }
     }
-    else{
+        if(final.length > 0){
+        alert(`As cidades que começão com a ${letra} são ${final.join(", ")}`);
+    }
+    else {
         alert(`Na nossa lista não existe cidade com a letra ${letra}`);
     }
-    }
     
-}
+    
+
+
 
 
 </script>
